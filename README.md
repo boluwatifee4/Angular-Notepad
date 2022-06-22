@@ -18,6 +18,7 @@
     - Recent deleted notes
 
 ## Demo
+Link: [https://bima-notepad.netlify.app](https://bima-notepad.netlify.app)
 
 | Mobile | Desktop |
 | ------ | ------- |
