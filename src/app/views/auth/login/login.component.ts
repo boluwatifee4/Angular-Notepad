@@ -16,6 +16,7 @@ public loginForm!: UntypedFormGroup;
 isLoggedIn: boolean = false;
 isLoggedInFailed: boolean = false;
 errorMsg: string = '';
+buttonTxt: string = 'Login';
   constructor(
     private authService: AuthService, 
     private router: Router, 
@@ -50,6 +51,7 @@ errorMsg: string = '';
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
     }
+    this.buttonTxt = 'Logging in...';
     
     this.authService.login(auth).subscribe(
       data => {

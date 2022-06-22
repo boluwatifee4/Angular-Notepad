@@ -4,15 +4,17 @@
     <h2>{{errorMsg}}</h2>
     </div>
     <form [formGroup]="loginForm" class="loginForm" (ngSubmit)="onSubmit()">
-       
+        <span class="info text-red-500 font-bold" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">Email Field Is Required</span>
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" formControlName="email">
         
-       
+            <span class="info text-red-500 font-bold" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">Password Field Is Required</span>
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" formControlName="password">
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button
+        [ngClass]="{'opacity-20 cursor-not-allowed': !loginForm.valid, 'opacity-100 cursor-pointer': loginForm.valid}" 
+        type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">{{buttonTxt}}</button>
     </form>
     <!-- link to redirect to register -->
     <p class="link">

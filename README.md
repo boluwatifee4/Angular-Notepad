@@ -10,16 +10,17 @@
 
     - Create, Edit, View, Delete Notes
     - Login/Signup
+    - Drag and Drop Notes
+    - 100% responsive
+    - PWA (Progressive Web App)
 
 ## Upcoming Features
-
-    - Search Notes
-    - Share Notes
     - Recent deleted notes
 
 ## Demo
 
 | Mobile | Desktop |
+| ------ | ------- |
 | ![1](src/assets/imgSampleMobile.PNG) | ![1](src/assets/imgSample.PNG) |
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.

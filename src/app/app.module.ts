@@ -15,6 +15,8 @@ import { ViewNotesComponent } from './views/pages/view-notes/view-notes.componen
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AuthGuard } from './guards/auth.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 // import { PickerModule } from '@ctrl/ngx-emoji-mart';
 // import { MatSidenavModule } from '@angular/material/sidenav';
 @NgModule({
@@ -36,6 +38,12 @@ import { AuthGuard } from './guards/auth.guard';
     HttpClientModule,
     DragDropModule,
     MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     // PickerModule,
     // MatSidenavModule,
 

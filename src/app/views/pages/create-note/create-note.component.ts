@@ -56,6 +56,7 @@ greetings: string = '';
       data => {
         this.getNotes();
         this.openSnackBar('Note created successfully');
+        this.emptyState = false;
         // this.router.navigate([Path.DASHBOARD]);
       }
     , error => {

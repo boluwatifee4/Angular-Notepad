@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   isLoggedIn: boolean = false;
   isloggedInFailed: boolean = false;
   errMsg: string = '';
+  buttonTxt: string = 'Register';
   constructor(
     private authService: AuthService, 
     private router: Router, 
@@ -41,6 +42,7 @@ export class RegisterComponent implements OnInit {
       first_name: this.registerForm.value.first_name,
       last_name: this.registerForm.value.last_name
     }
+    this.buttonTxt = 'Registering...';
     // save first name to local storage
     localStorage.setItem('first_name', auth.first_name);
     this.authService.register(auth).subscribe(

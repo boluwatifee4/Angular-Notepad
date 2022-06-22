@@ -43,7 +43,8 @@
             <h1 class="bodyH">Your Notes</h1>
            </div>
             <div class="inside">
-                <img class="emptyStateImg" *ngIf="emptyState" src="../../../../assets/empty.png" alt="emptyStateImg">
+                <h1 *ngIf="emptyState" class="text-white font-bold text-lg">Nothing here 😞</h1>
+                <!-- <img class="emptyStateImg" *ngIf="emptyState" src="../../../../assets/empty.png" alt="emptyStateImg"> -->
             </div>
             <div *ngIf="loading" class="loader">Loading...</div>
             <div *ngIf="!loading" class="">
