@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let Path = /*#__PURE__*/(() => {\n  class Path {}\n\n  Path.LOGIN = 'login';\n  Path.REGISTER = 'register';\n  Path.DASHBOARD = 'dashboard';\n  Path.HOME = 'home';\n  Path.AUTH = 'auth';\n  Path.AUTHDEF = '/';\n  Path.EDIT_NOTE = 'edit-note/:id';\n  return Path;\n})();","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,247 @@
+.cNote{
+// background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+// 	background-size: 400% 400%;
+// 	animation: gradient 15s ease infinite;
+// animation: gradient 15s ease infinite;
+ }
+ @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.sideNav{
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+   
+    // padding-top: 60px;
+}
+
+.addBtn{
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    padding: .3rem;
+  //  margin: 2rem;
+}
+.body{
+    // margin-left: 8rem;
+    margin-top: 2rem;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+
+    & .inside{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    & .bodyH1{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    & .bodyH{
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+}
+
+.ctn {
+    margin: 1rem .6rem;
+    flex-direction: row;
+    /* text-align: center; */
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    gap: 5px;
+   
+    /* height: fit-content; */
+  }
+  
+  .cards {
+    /* border: 1px solid rgba(2, 43, 105, .07); */
+    border-radius: 15px;
+    /* text-align: left; */
+    width: auto;
+    // height: 28rem;
+    margin-top: 2rem;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    transition: 0.5s ease-in-out;
+    // align-items:center !important;
+    padding: 1rem;
+    color: white;
+    // margin: 1rem;
+    font-weight: bold;
+    cursor: grab;
+
+    & .edit, .delete{
+      background-color: #272525;
+      width: fit-content;
+      padding: .4rem;
+      border-radius: 2rem;
+      cursor: pointer !important;
+    }
+
+    & .edit{
+        margin: 1rem 0;
+        margin-top: 0;
+    }
+  }
+//   give different background-color to cards
+.cards:nth-child(even){
+    // background-image: linear-gradient(to right top, rgb(139, 92, 246), rgb(253, 186, 116));
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+animation: gradient 15s ease infinite;
+    width: 80%;
+}
+.cards:nth-child(odd){
+  background-image: radial-gradient(at right center, rgb(56, 189, 248), rgb(49, 46, 129));
+}
+  
+.loader,
+.loader:before,
+.loader:after {
+  background: #242323;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #ffffff;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    margin-bottom: 0;
+}
+.emptyStateImg{
+    height: 80vh;
+}
+.typeNote{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:60%; /* Assign a value */
+    height:fit-content; /* Assign a value */
+    margin:auto;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    // color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    & .createForm{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        // align-items: center;
+    }
+    & .inputsTA, .Btn{
+        width: 50%;
+    }
+    & #title, #content{
+        padding: 1rem;
+        width: 200%;
+        margin: .3rem 0;
+        border-radius: .3rem;
+    }
+    & .Btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+    background-color: white;
+    color: black;
+    border-radius: 2rem;
+    padding: .2rem;
+    }
+}
+// medua query
+@media screen and (max-width:1024px) and (min-width:768px) {
+  .ctn{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (max-width:767px) and (min-width:80px){
+  .ctn{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .cards{
+    font-size: .6rem;
+  }
+  .bodyH1{
+    margin-top: 2rem;
+    font-size: 1.3rem !important;
+  }
+}

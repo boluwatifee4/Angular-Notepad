@@ -1,0 +1,49 @@
+.Register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:7rem ;
+    
+    & .registerTxts{
+        color: white ;
+        & h1{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    }
+    & .registerForm label{
+        font-size: 1rem;
+        font-weight: bold;
+        margin: .5rem 0;
+        color: white;
+    }
+    & .registerForm{
+        display: flex;
+        flex-direction: column;
+
+        &  input{
+            width: 20rem;
+            height: 2rem;
+            border-radius: 2rem;
+            border: 1px solid white;
+            padding: .5rem;
+            margin: .5rem 0;
+        }
+        & .btn{
+            width: 20rem;
+            height: 2rem;
+            border-radius: 2rem;
+            border: 1px solid white;
+            
+            margin: .5rem 0;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+.btn, .link{
+    color: white;
+}

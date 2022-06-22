@@ -1,0 +1,26 @@
+
+<div class="Register">
+    <div class="registerTxts">
+        <h1>Register</h1>
+    <h2>{{errMsg}}</h2>
+    </div>
+    <form [formGroup]="registerForm" class="registerForm" (ngSubmit)="onSubmit()">
+        
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+        
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" formControlName="first_name">
+        
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" formControlName="last_name">
+        
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- link to redirect to login -->
+    <p class="link">
+        <a routerLink="/">Login </a><span>Here If You already have an account</span>
+    </p>
+</div>
