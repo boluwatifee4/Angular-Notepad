@@ -60,7 +60,7 @@
 }
 
 .ctn {
-    margin: 1rem .6rem;
+    // margin: 1rem .6rem;
     flex-direction: row;
     /* text-align: center; */
     width: auto;
@@ -225,6 +225,17 @@ animation: gradient 15s ease infinite;
     border-radius: 2rem;
     padding: .2rem;
     }
+}
+#overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: visible;
+  opacity: 1;
 }
 // medua query
 @media screen and (max-width:1024px) and (min-width:768px) {

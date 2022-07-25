@@ -9,13 +9,13 @@ export class TaostsService {
 
   openSnackBar(message: string) {
     this._snackBar.open(message, '', {
-      duration: 2000,
+      duration: 1000,
     });
   }
 
   openSnackBarWithAction(message: string, action: string) {
     this._snackBar.open(message, action, {
-      duration: 2000,
+      duration: 1000,
     });
   }
 }
